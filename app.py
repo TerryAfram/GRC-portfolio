@@ -62,7 +62,6 @@ st.markdown(
 col_img, col_text = st.columns([1, 2])
 
 with col_img:
-    # Points directly to your uploaded image filename
     st.image("IMG_3675.jpeg", width=200)
 
 with col_text:
@@ -73,32 +72,75 @@ with col_text:
 st.write("---")
 st.markdown("### 📌 About Me")
 st.write(
-    "Certified Information Systems Auditor (CISA) and Project Management"
-    " Professional (PMP) specializing in cloud security, Governance, Risk, AI Audit,"
-    " and Compliance (GRC), and automated control validation. I bridge the gap"
-    " between technical infrastructure and regulatory frameworks, designing"
-    " automated solutions that map technical controls to standards like NIST SP"
-    " 800-53 and COBIT."
+    "Certified Information Systems Auditor (CISA), Project Management"
+    " Professional (PMP), and MSc holder specializing in cloud security,"
+    " Governance, Risk, and Compliance (GRC), and automated control"
+    " validation. Architecting enterprise controls and AI governance by"
+    " bridging technical infrastructure with regulatory frameworks like NIST"
+    " SP 800-53 and COBIT."
 )
 st.write(
-    "My technical work focuses on building Python-based compliance automation"
-    " tools, securing cloud resource groups in Microsoft Azure, and enforcing"
-    " Infrastructure as Code (IaC) governance through Terraform and"
-    " policy-as-code validations."
+    "My work integrates secure software engineering, Python backend"
+    " hardening, tokenized authentication governance (LangChain), and cloud"
+    " cost optimization with rigorous audit controls."
 )
 
 st.divider()
 
 # ---------------------------------------------------------
-# Key Metrics / Highlights
+# Enhanced Core Metrics Section (Detailed with Matrix Insights)
 # ---------------------------------------------------------
-m1, m2, m3 = st.columns(3)
-with m1:
-    st.metric(label="🎯 Focus", value="Cloud GRC")
-with m2:
-    st.metric(label="⚡ Core Stack", value="Python / Azure")
-with m3:
-    st.metric(label="🏗️ Infrastructure", value="Terraform")
+st.subheader("🎯 Core Focus Areas & Engineering Domains")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown(
+        """
+    <div class="project-card">
+        <div class="project-title">☁️ Cloud GRC & IAM</div>
+        <div class="project-desc">
+            <b>Microsoft Azure Security:</b><br>
+            • Identity & Access Management<br>
+            • RBAC & Entra ID credentialing<br>
+            • Least privilege & access logs audit
+        </div>
+    </div>
+    """,
+        unsafe_allow_html=True,
+    )
+
+with col2:
+    st.markdown(
+        """
+    <div class="project-card">
+        <div class="project-title">🐍 Python & AI Stack</div>
+        <div class="project-desc">
+            <b>Backend & LangChain:</b><br>
+            • API validation & environment isolation<br>
+            • Tokenized authentication governance<br>
+            • Model usage controls & PTU monitoring
+        </div>
+    </div>
+    """,
+        unsafe_allow_html=True,
+    )
+
+with col3:
+    st.markdown(
+        """
+        <div class="project-card">
+            <div class="project-title">🏗️ Secure DevOps</div>
+            <div class="project-desc">
+                <b>VS Code & Infrastructure:</b><br>
+                • Repo segregation & commit guardrails<br>
+                • Secret scanning & branch protection<br>
+                • Terraform baseline compliance
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 st.divider()
 
@@ -113,7 +155,7 @@ st.markdown(
     <div class="project-card">
         <div class="project-title">🔍 Azure Native Auditor</div>
         <div class="project-desc">
-            Automated compliance scripts engineered to scan cloud storage environments and automatically map technical controls to NIST SP 800-53 and COBIT frameworks.
+            Automated compliance scripts engineered to scan cloud storage environments, enforce least-privilege checks, and map technical controls to NIST SP 800-53 and COBIT frameworks.
         </div>
         <div>
             <span class="tag-python">🐍 Python</span>
@@ -133,7 +175,7 @@ st.markdown(
     <div class="project-card">
         <div class="project-title">🔑 Azure IAM Governance Tool</div>
         <div class="project-desc">
-            Automated identity auditing suite designed to evaluate privileged assignments, track role-based access control (RBAC) drift, and generate risk assessment reports.
+            Automated identity auditing suite designed to evaluate privileged assignments, track token lifecycles, manage Entra ID credentials, and mitigate RBAC drift.
         </div>
         <div>
             <span class="tag-sec">🛡️ Identity Access</span>
@@ -153,7 +195,7 @@ st.markdown(
     <div class="project-card">
         <div class="project-title">🏗️ Azure Terraform Compliance</div>
         <div class="project-desc">
-            Infrastructure as Code (IaC) templates and policy-as-code validations leveraging Terraform to enforce baseline compliance for secure cloud deployments.
+            Infrastructure as Code (IaC) templates and policy-as-code validations leveraging Terraform alongside secure VS Code devops workflows (secret linting and branch protection) to enforce secure cloud baselines.
         </div>
         <div>
             <span class="tag-azure">⚡ Terraform</span>
