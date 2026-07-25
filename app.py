@@ -12,14 +12,12 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Main Background & Font Styling */
     .stApp {
         background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         font-family: 'Inter', sans-serif;
         color: #f8fafc;
     }
     
-    /* Vibrant Project Cards */
     .project-card {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         border: 1px solid #3b82f6;
@@ -50,7 +48,6 @@ st.markdown(
         margin-bottom: 15px;
     }
     
-    /* Colorful Tags */
     .tag-python { background-color: #1e3a8a; color: #93c5fd; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-right: 6px; display: inline-block; }
     .tag-azure { background-color: #0369a1; color: #bae6fd; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-right: 6px; display: inline-block; }
     .tag-sec { background-color: #581c87; color: #e9d5ff; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-right: 6px; display: inline-block; }
@@ -60,15 +57,39 @@ st.markdown(
 )
 
 # ---------------------------------------------------------
-# Header Section
+# Header Section with Profile Picture & Bio Side-by-Side
 # ---------------------------------------------------------
-st.title("🛡️ Terry Afram-Kumi")
-st.subheader("🚀 Cloud Security, GRC Automation & Infrastructure Portfolio")
+col_img, col_text = st.columns([1, 2])
 
+with col_img:
+    try:
+        st.image("profile.jpg", width=200)
+    except Exception:
+        try:
+            st.image("profile.png", width=200)
+        except Exception:
+            st.info("Upload profile.jpg to your repo")
+
+with col_text:
+    st.title("🛡️ Terry Afram-Kumi")
+    st.caption("CISA | PMP | Cloud Security & GRC Professional")
+
+# Professional Summary Bio
+st.write("---")
+st.markdown("### 📌 About Me")
 st.write(
-    "Welcome! Explore my active technical security repositories focused on"
-    " cloud compliance automation, IAM identity governance, and secure"
-    " infrastructure."
+    "Certified Information Systems Auditor (CISA) and Project Management"
+    " Professional (PMP) specializing in cloud security, Governance, Risk,"
+    " and Compliance (GRC), and automated control validation. I bridge the gap"
+    " between technical infrastructure and regulatory frameworks, designing"
+    " automated solutions that map technical controls to standards like NIST SP"
+    " 800-53 and COBIT."
+)
+st.write(
+    "My technical work focuses on building Python-based compliance automation"
+    " tools, securing cloud resource groups in Microsoft Azure, and enforcing"
+    " Infrastructure as Code (IaC) governance through Terraform and"
+    " policy-as-code validations."
 )
 
 st.divider()
@@ -76,18 +97,18 @@ st.divider()
 # ---------------------------------------------------------
 # Key Metrics / Highlights
 # ---------------------------------------------------------
-col1, col2, col3 = st.columns(3)
-with col1:
+m1, m2, m3 = st.columns(3)
+with m1:
     st.metric(label="🎯 Focus", value="Cloud GRC")
-with col2:
+with m2:
     st.metric(label="⚡ Core Stack", value="Python / Azure")
-with col3:
+with m3:
     st.metric(label="🏗️ Infrastructure", value="Terraform")
 
 st.divider()
 
 # ---------------------------------------------------------
-# Projects Section (Colorful Cards with Icons)
+# Projects Section
 # ---------------------------------------------------------
 st.subheader("📂 Featured Repositories")
 
