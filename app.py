@@ -7,55 +7,53 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Custom CSS for UI Enhancement
+# Custom Colorful CSS Styling
 # ---------------------------------------------------------
 st.markdown(
     """
     <style>
     /* Main Background & Font Styling */
     .stApp {
-        background-color: #0e1117;
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         font-family: 'Inter', sans-serif;
+        color: #f8fafc;
     }
     
-    /* Custom Project Card Styling */
+    /* Vibrant Project Cards */
     .project-card {
-        background-color: #1e222d;
-        border: 1px solid #2e364f;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        transition: transform 0.2s ease, border-color 0.2s ease;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        border: 1px solid #3b82f6;
+        border-radius: 12px;
+        padding: 22px;
+        margin-bottom: 22px;
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     
     .project-card:hover {
-        border-color: #4da6ff;
-        transform: translateY(-2px);
+        border-color: #60a5fa;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 25px rgba(96, 165, 250, 0.25);
     }
     
     .project-title {
-        color: #ffffff;
-        font-size: 1.25rem;
-        font-weight: 600;
+        color: #60a5fa;
+        font-size: 1.3rem;
+        font-weight: 700;
         margin-bottom: 8px;
     }
     
     .project-desc {
-        color: #b0b8c8;
+        color: #cbd5e1;
         font-size: 0.95rem;
-        line-height: 1.5;
+        line-height: 1.6;
         margin-bottom: 15px;
     }
     
-    .tag {
-        background-color: #263352;
-        color: #4da6ff;
-        padding: 4px 10px;
-        border-radius: 15px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        margin-right: 6px;
-    }
+    /* Colorful Tags */
+    .tag-python { background-color: #1e3a8a; color: #93c5fd; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-right: 6px; display: inline-block; }
+    .tag-azure { background-color: #0369a1; color: #bae6fd; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-right: 6px; display: inline-block; }
+    .tag-sec { background-color: #581c87; color: #e9d5ff; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-right: 6px; display: inline-block; }
     </style>
 """,
     unsafe_allow_html=True,
@@ -65,32 +63,33 @@ st.markdown(
 # Header Section
 # ---------------------------------------------------------
 st.title("🛡️ Terry Afram-Kumi")
-st.subheader("Cloud Security, GRC Automation & Infrastructure Portfolio")
+st.subheader("🚀 Cloud Security, GRC Automation & Infrastructure Portfolio")
 
 st.write(
-    "Welcome! Below are my active technical security projects focusing on "
-    "cloud security compliance, IAM risk assessments, and automated governance."
+    "Welcome! Explore my active technical security repositories focused on"
+    " cloud compliance automation, IAM identity governance, and secure"
+    " infrastructure."
 )
 
 st.divider()
 
 # ---------------------------------------------------------
-# Key Credentials & Highlights (Columns)
+# Key Metrics / Highlights
 # ---------------------------------------------------------
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.metric(label="Primary Focus", value="Cloud GRC")
+    st.metric(label="🎯 Focus", value="Cloud GRC")
 with col2:
-    st.metric(label="Automation", value="Python / Azure")
+    st.metric(label="⚡ Core Stack", value="Python / Azure")
 with col3:
-    st.metric(label="IaC Security", value="Terraform")
+    st.metric(label="🏗️ Infrastructure", value="Terraform")
 
 st.divider()
 
 # ---------------------------------------------------------
-# Projects Section (Styled Cards)
+# Projects Section (Colorful Cards with Icons)
 # ---------------------------------------------------------
-st.subheader("📌 Featured Repositories")
+st.subheader("📂 Featured Repositories")
 
 # Project 1
 st.markdown(
@@ -98,15 +97,15 @@ st.markdown(
     <div class="project-card">
         <div class="project-title">🔍 Azure Native Auditor</div>
         <div class="project-desc">
-            Automated compliance scripts designed to scan cloud storage environments and automatically map technical controls to NIST SP 800-53 and COBIT frameworks.
+            Automated compliance scripts engineered to scan cloud storage environments and automatically map technical controls to NIST SP 800-53 and COBIT frameworks.
         </div>
         <div>
-            <span class="tag">Python</span>
-            <span class="tag">Azure</span>
-            <span class="tag">NIST 800-53</span>
+            <span class="tag-python">🐍 Python</span>
+            <span class="tag-azure">☁️ Azure</span>
+            <span class="tag-sec">🔒 NIST 800-53</span>
         </div>
-        <br>
-        <a href="https://github.com/terryafram/azure-native-auditor" target="_blank" style="color: #4da6ff; text-decoration: none; font-weight: 600;">View Repository on GitHub →</a>
+        <br><br>
+        <a href="https://github.com/terryafram/azure-native-auditor" target="_blank" style="color: #60a5fa; text-decoration: none; font-weight: 700;">View Repository on GitHub →</a>
     </div>
 """,
     unsafe_allow_html=True,
@@ -118,15 +117,15 @@ st.markdown(
     <div class="project-card">
         <div class="project-title">🔑 Azure IAM Governance Tool</div>
         <div class="project-desc">
-            Automated identity auditing suite to evaluate privileged assignments, track role-based access control (RBAC) drift, and generate risk assessment reports.
+            Automated identity auditing suite designed to evaluate privileged assignments, track role-based access control (RBAC) drift, and generate risk assessment reports.
         </div>
         <div>
-            <span class="tag">Identity & Access</span>
-            <span class="tag">Governance</span>
-            <span class="tag">Azure AD / Entra</span>
+            <span class="tag-sec">🛡️ Identity Access</span>
+            <span class="tag-azure">☁️ Azure Entra</span>
+            <span class="tag-python">📊 Governance</span>
         </div>
-        <br>
-        <a href="https://github.com/terryafram/azure-iam-governance-tool" target="_blank" style="color: #4da6ff; text-decoration: none; font-weight: 600;">View Repository on GitHub →</a>
+        <br><br>
+        <a href="https://github.com/terryafram/azure-iam-governance-tool" target="_blank" style="color: #60a5fa; text-decoration: none; font-weight: 700;">View Repository on GitHub →</a>
     </div>
 """,
     unsafe_allow_html=True,
@@ -138,15 +137,15 @@ st.markdown(
     <div class="project-card">
         <div class="project-title">🏗️ Azure Terraform Compliance</div>
         <div class="project-desc">
-            Infrastructure as Code (IaC) templates and policy-as-code validations leveraging Terraform to enforce baseline compliance for cloud infrastructure deployments.
+            Infrastructure as Code (IaC) templates and policy-as-code validations leveraging Terraform to enforce baseline compliance for secure cloud deployments.
         </div>
         <div>
-            <span class="tag">Terraform</span>
-            <span class="tag">IaC Security</span>
-            <span class="tag">Policy-as-Code</span>
+            <span class="tag-azure">⚡ Terraform</span>
+            <span class="tag-sec">🛡️ IaC Security</span>
+            <span class="tag-python">📋 Policy-as-Code</span>
         </div>
-        <br>
-        <a href="https://github.com/terryafram/azure-iac-terraform" target="_blank" style="color: #4da6ff; text-decoration: none; font-weight: 600;">View Repository on GitHub →</a>
+        <br><br>
+        <a href="https://github.com/terryafram/azure-iac-terraform" target="_blank" style="color: #60a5fa; text-decoration: none; font-weight: 700;">View Repository on GitHub →</a>
     </div>
 """,
     unsafe_allow_html=True,
