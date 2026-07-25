@@ -62,24 +62,19 @@ st.markdown(
 col_img, col_text = st.columns([1, 2])
 
 with col_img:
-    try:
-        st.image("profile.jpg", width=200)
-    except Exception:
-        try:
-            st.image("profile.png", width=200)
-        except Exception:
-            st.info("Upload profile.jpg to your repo")
+    # Points directly to your uploaded image filename
+    st.image("IMG_3675.jpeg", width=200)
 
 with col_text:
     st.title("🛡️ Terry Afram-Kumi")
-    st.caption("CISA | PMP | Cloud Security & GRC Professional")
+    st.caption("CISA | PMP | MSc | Cloud Security & GRC Professional")
 
 # Professional Summary Bio
 st.write("---")
 st.markdown("### 📌 About Me")
 st.write(
     "Certified Information Systems Auditor (CISA) and Project Management"
-    " Professional (PMP) specializing in cloud security, Governance, Risk,"
+    " Professional (PMP) specializing in cloud security, Governance, Risk, AI Audit,"
     " and Compliance (GRC), and automated control validation. I bridge the gap"
     " between technical infrastructure and regulatory frameworks, designing"
     " automated solutions that map technical controls to standards like NIST SP"
