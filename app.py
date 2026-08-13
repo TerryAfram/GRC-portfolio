@@ -62,25 +62,30 @@ st.markdown(
 col_img, col_text = st.columns([1, 2])
 
 with col_img:
-    st.image("IMG_3675.jpeg", width=200)
+    st.image("IMG_3675.jpeg", width=300)
 
 with col_text:
     st.title("🛡️ Terry Afram-Kumi")
-    st.caption("CISA | PMP | MSc | Cloud Security & GRC Professional")
+    st.caption("CISA | PMP | MSc | Cloud Security Engineering & GRC Professional")
+
+st.markdown(
+    '<a href="mailto:aframterry@gmail.com" style="background-color: #2563eb; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">📧 Contact via Email</a>',
+    unsafe_allow_html=True
+)
 
 # Professional Summary Bio
 st.write("---")
 st.markdown("### 📌 About Me")
 st.write(
     "Certified Information Systems Auditor (CISA), Project Management"
-    " Professional (PMP), and MSc holder specializing in cloud security,"
+    " Professional (PMP), ISO 27001 and AI Auditor with technical specialization GRC Audit and Cloud Engineering,"
     " Governance, Risk, and Compliance (GRC), and automated control"
     " validation. Architecting enterprise controls and AI governance by"
-    " bridging technical infrastructure with regulatory frameworks like NIST"
-    " SP 800-53 and COBIT."
+    " bridging technical infrastructure with regulatory frameworks like NIST SP 800-53, ISO, SOX, SOC"
+    " and COBIT."
 )
 st.write(
-    "My work integrates secure software engineering, Python backend"
+    "My work integrates cybersecurity auditing with secure software engineering, Python backend"
     " hardening, tokenized authentication governance (LangChain), and cloud"
     " cost optimization with rigorous audit controls."
 )
